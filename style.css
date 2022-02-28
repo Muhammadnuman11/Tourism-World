@@ -1,0 +1,322 @@
+*{
+ margin: 0;
+ padding: 0;
+ font-family: monospace;
+}
+
+body, html{
+ overflow-x: hidden;
+}
+
+/*Common Classes*/
+.btn{
+ background-color: rgb(196, 4, 4);
+ color: whitesmoke;
+ border-radius: 12px;
+ padding: 6px 15px;
+ font-size: 1.3rem;
+ color: whitesmoke;
+ text-decoration: none;
+}
+.line{
+ width: 160px;
+ height: 3px;
+ background-color: rgb(196, 4, 4);
+ border-radius: 10px;
+ margin: 10px auto;
+}
+
+/* Navigation Bar */
+.navbar{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ position: absolute;
+ width: 100%;
+ top: 0;
+ left: 0;
+}
+
+.navbar .logo h1{
+ font-size: 2.2rem;
+ color: whitesmoke;
+ padding: 20px;
+}
+
+.navbar ul{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.navbar ul li{
+ list-style: none;
+}
+
+.navbar ul li a{
+ text-decoration: none;
+ margin: 0 30px;
+ font-size: 1.3rem;
+ color: whitesmoke;
+}
+
+.navbar ul li a:hover{
+ color: rgb(196, 4, 4);
+ cursor: pointer;
+}
+
+
+/* Header */
+.head{
+ background: url(img/bg-img.jpg);
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+ flex-direction: column;
+}
+
+.head .head-content{
+ margin-bottom: 80px;
+ text-align: center;
+}
+
+.head .head-content h2{
+ font-size: 2.0rem;
+ color: whitesmoke;
+ font-family: Georgia;
+}
+
+.head .head-content h1{
+ font-size: 3.4rem;
+ color: whitesmoke;
+ margin-top: 45px;
+ margin-bottom: 25px;
+ font-family: sans-serif;
+}
+
+   
+/* Event Section */
+.event{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.event h1{
+ font-size: 3.1rem;
+ margin-top: 50px;
+}
+
+.row{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.column{
+ display: flex;
+ flex-direction: column;
+ width: 60%;
+ margin: 30px 50px;
+ text-align: center;
+}
+
+.column h2{
+ font-size: 2.3rem;
+ margin: 25px 0 15px 0;
+}
+
+.column a{
+ width: 95px;
+ margin: 15px auto;
+}
+
+/*Explore Section*/
+.explore{
+ background: url(img/bg2.png);
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ width: 100vw;
+ height: 100vh;
+ margin-top: 50px;
+ display: flex;
+ align-items: center;
+} 
+
+.explore-content{
+ display: flex;
+ flex-direction: column; 
+ align-items: center;
+ justify-content: center;
+ width: 60%;
+ margin-left: 60px;
+ color: whitesmoke;
+ text-align: center;
+}
+
+.explore-content h1{
+ font-size: 4.5rem;
+}
+
+.explore-content p{
+ font-size: 14px;
+ margin: 30px;
+ padding: 0 30px;
+}
+
+/*Tour Section*/
+.tour{
+ display: flex;
+ align-items: center;
+ margin: 30px 100px;
+}
+
+.tour-content{
+ display: flex;
+ flex-direction: column; 
+ align-items: center;
+ justify-content: flex-start;
+ width: 45%;
+ margin: 10px;
+}
+
+.tour-content .line{
+ margin-left: -1px;
+}
+
+.tour-content h1{
+ font-size: 3.2rem;
+}
+   
+.tour-content p{
+ font-size: 14px;
+ margin: 30px 10px;
+}
+
+.gallary{
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: flex-end;
+ width: 55%;
+}
+
+.gallary img{
+ margin: 10px;
+ width: 250px;
+}
+
+/*Footer*/
+footer{
+ background-color: rgb(56, 52, 52);
+ padding: 20px;
+}
+
+footer p{
+ font-size: 15px;
+ text-align: center;
+ margin: 10px;
+ color: whitesmoke;
+}
+
+
+
+/*Media Query*/
+
+@media only screen and (max-width:900px){
+
+/*Navigation Bar*/
+.navbar{
+ align-items: flex-start;
+ background-color: rgb(50, 54, 66);
+ border-bottom-right-radius: 200px;
+ height: 100vh;
+ width: 100%;
+ top: 0;
+ left: 0;
+ transition: all 0.7s ease;
+}
+
+.navbar ul{
+ flex-direction: column;
+ height: 90vh;
+}
+
+.navbar ul li{
+ margin: 35px;
+}
+
+
+/*Burger and responsive*/
+.burger{
+ margin: 20px;
+ cursor: pointer;
+}
+
+.burger .b-line{
+ margin: 4px;
+ height: 4px;
+ width: 30px;
+ background-color: whitesmoke;
+ border-radius: 15px;
+}
+
+.h-nav-resp{
+ height: 0px;
+}
+   
+.v-class-resp{
+ opacity: 0;
+}
+
+/* Event Section */
+.row{
+ flex-direction: column;
+}
+   
+/*Tour Section*/
+.tour{
+ flex-direction: column;
+ margin: 30px 0px;
+}
+
+.tour .tour-content{
+ width: 80%;
+}
+
+.tour-content p{
+ margin: 30px 0px;
+}
+
+.gallary{
+ justify-content: center;
+ width: 80%;
+ margin: 30px;
+}
+
+
+    
+}
+
+
+/* Animation */
+
+img{
+ transition: transform 0.8s ease;
+}
+
+img:hover{
+ transform: scale(1.1);
+}
+
+.btn:hover{
+ background-color: whitesmoke;
+ color: rgb(196, 4, 4);
+ box-shadow: 3px 3px 5px #00000056;
+}
